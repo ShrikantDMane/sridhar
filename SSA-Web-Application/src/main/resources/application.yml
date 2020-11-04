@@ -1,0 +1,24 @@
+logging:
+  file:
+    name: ssn_enrollment.log
+
+server:
+  port: 9595
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    password: nani
+    url: jdbc:oracle:thin:@localhost:1523:orcln
+    username: system
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+
+app:
+  messages:
+    invalidSSN: Invalid SSN No
+    enrollSuccess: Enrollment Completed Successfully This is Your SSN No
